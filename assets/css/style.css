@@ -7,12 +7,10 @@ header{
 }
 .navbar-brand{
     background-color: #4aaaa5;
+    font-size: 30px;
+    padding-top: 25px;
     margin-left: 175px;
 }
-
-
-
-
 .container{
     position: relative;
     top: 75px;
@@ -43,15 +41,8 @@ header{
     border-style: solid;
     border-color: #4aaaa5;
     text-align: center;
-
-    
-
 }
-
-
-
 html,body{
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 32px;
@@ -60,9 +51,6 @@ html,body{
 body{
     background-image: url(..//images/concrete_seamless.png);
 }
-
- 
- 
 h1{
     color: #4aaaa5;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -71,3 +59,85 @@ h1{
     margin-left: 50px;
     margin-right: 50px;
 }
+
+#galleries {
+    position: relative;
+    overflow: auto;
+    margin: auto;
+    top: 50px;
+}
+.images {
+    height: 150px;
+    width: 250px;
+    margin-right: 35px;
+    margin-bottom: 40px;
+    float: left;
+}
+.images:hover, .images:active {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.images:hover img,.images:active img {
+    box-shadow: 3px 6px 4px #ccc;
+}
+
+ .images:hover .imageLabel,.images:active .imageLabel {
+    background-color: #4AC199;
+}
+
+ .imageLabel {
+    color: #fff;
+    background: #4aaaa5;
+    z-index: 100;
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+    line-height: 40px;
+    bottom: 60px;
+    }
+
+    @media (max-width: 991.98px) {
+        .nav-item {
+            border-bottom: 2px solid #87B8B6;
+        }
+    
+        
+        
+        #galleries {
+            margin: auto;
+            max-width: 250px;
+        }
+    
+        .images {
+            clear: both;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            max-width: 250px;
+            display: block;
+            margin-top: 10px;
+        }
+    }
+    
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .galleryContainer {
+            display: block;
+        }
+        #galleries::before,#galleries::after {
+            box-sizing: content-box;
+        }
+        #galleries {
+            position: relative;
+            overflow: auto;
+            max-width: none;
+            margin: auto;
+            display: block;
+            width: 540px;
+        }
+        .images {
+            clear: none;
+            margin: 10px;
+        }
+    }
+    
